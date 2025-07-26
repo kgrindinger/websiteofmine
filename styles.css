@@ -42,7 +42,7 @@ h1 {
     color: rgb(128, 0, 128);
 }
 h2 {
-    font-family: 'cursive', sans-serif;
+    font-family: 'cursive';
     font-style: italic;
     font-weight: bold;
     font-size: 3rem;
@@ -71,8 +71,17 @@ hr {
 a:hover {
     color: rgb(255, 69, 0);
 }
-
-p::first-letter {
-    font-size: 2rem;
-    color: #5c3458;
+footer p:not(:last-of-type)::first-letter {
+  font-size: 2rem;
+  color: #5c3458;
 }
+
+footer p:last-of-type a::first-letter {
+  font-size: initial;
+  color: initial;
+}
+
+
+
+
+
