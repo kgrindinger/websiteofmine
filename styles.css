@@ -71,9 +71,9 @@ hr {
 a:hover {
     color: rgb(255, 69, 0);
 }
-footer p:not(:last-of-type)::first-letter {
-  font-size: 2rem;
-  color: #5c3458;
+p::first-letter {
+    font-size: 2rem;
+    color: #5c3458;
 }
 
 footer p:last-of-type a::first-letter {
