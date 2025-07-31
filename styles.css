@@ -4,19 +4,11 @@ body {
     color: rgb(14, 13, 13);
     margin: 50px;
     padding: 5;
-}
-
-header {
-    text-align: center;
-    font-size: 2rem;
-    color: #f0f2f1;
-    padding: 1rem;
-}
-
-html,
-body {
     height: 100%;
-    margin: 50px;
+    margin: 50px auto;
+    padding: 30px;
+    width: 80%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .centered {
@@ -39,8 +31,16 @@ h1 {
     font-weight: bold;
     font-size: 3rem;
     text-align: center;
-    color: rgb(128, 0, 128);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    background: linear-gradient(to right, #e88182, #b20e03);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
+
 h2 {
     font-family: 'cursive';
     font-style: italic;
@@ -75,6 +75,14 @@ p::first-letter {
     font-size: 2rem;
     color: #5c3458;
 }
+.card {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
 
 footer p:last-of-type a::first-letter {
   font-size: initial;
