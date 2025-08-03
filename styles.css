@@ -1,4 +1,4 @@
-body {
+html, body {
     font-family: 'Arial', sans-serif;
     background-color: #dddfe6;
     color: rgb(14, 13, 13);
@@ -20,22 +20,24 @@ body {
 .fancy:hover {
   transform: scale(1.2) rotate(-3deg);
 }
-
 .centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background-image: url('traveltags.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-
-
 .content {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.0;
     margin: 2rem auto;
     width: 80%;
 }
-
  h1 {
   font-style: italic;
   font-weight: bold;
@@ -47,13 +49,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-
-  display: block;         /* or leave as inline-block */
-  margin: 0 auto;         /* centers it horizontally */
-  width: fit-content;     /* shrink-wrap the content */
+  display: block;         
+  margin: 0 auto;         
+  width: fit-content;   
 }
-
-
 h2 {
     font-family: 'cursive';
     font-style: italic;
@@ -86,7 +85,7 @@ a:hover {
 }
 p::first-letter {
     font-size: 2rem;
-    color: #5c3458;
+    color: #ff000d;
 }
 .card {
   margin-bottom: 20px;
