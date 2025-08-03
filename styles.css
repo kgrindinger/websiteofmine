@@ -25,7 +25,6 @@ html, body {
   justify-content: center;
   align-items: center;
   padding: 3rem;
-  background-image: url('traveltags.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -69,9 +68,18 @@ img {
 
 
 a[href^="https"] {
-    color: rgb(0, 123, 255);
+    color: rgb(252, 211, 211);
     text-decoration: none;
 }
+.centered-link {
+  color: #ff000d;
+  text-decoration: none; /* optional */
+}
+
+.centered-link:hover {
+  color: #ff6666; /* lighter red on hover */
+}
+
 
 hr {
     border: none;
@@ -81,7 +89,7 @@ hr {
 }
 
 a:hover {
-    color: rgb(255, 69, 0);
+    color: #ff000d;
 }
 p::first-letter {
     font-size: 2rem;
@@ -100,6 +108,10 @@ footer p:last-of-type a::first-letter {
   font-size: initial;
   color: initial;
 }
+.page-footer {
+  color: #ff000d;
+}
+
 
 
 
