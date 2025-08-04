@@ -1,11 +1,26 @@
 html,
 body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dddfe6;
+    color: rgb(14, 13, 13);
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
+    background-image: url('photos/unionjack.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
     font-family: 'Arial', sans-serif;
-    color: #020202;
 }
-
+.overlay {
+    background-color: rgba(240, 240, 240, 0.9);
+    padding: 30px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
 .container {
     display: flex;
     gap: 20px;
@@ -31,11 +46,7 @@ header h2 {
     margin-bottom: 40px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #ff000d;
-}
+
 nav {
     width: 100%;
     display: flex;
@@ -88,4 +99,9 @@ section img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #ff000d;
 }
