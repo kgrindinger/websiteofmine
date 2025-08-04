@@ -12,6 +12,34 @@ body {
     background-position: center;
     background-repeat: repeat;
     font-family: 'Arial', sans-serif;
+    body.index3.html {
+    background-image: url('photos/netherlands.jpg');
+}
+
+body.about-page {
+    background-image: url('photos/about-bg.jpg');
+}
+
+body.contact-page {
+    background-image: url('photos/contact-bg.jpg');
+}
+
+/* Optional shared background settings */
+body.home-page,
+body.about-page,
+body.contact-page {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+}
+
+a:focus,
+button:focus {
+    outline: 2px solid #ff000d;
+    outline-offset: 2px;
+    background-color: #f0f0f0;
 }
 
 .overlay {
@@ -22,42 +50,7 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-#nav_list ul {
-    list-style-type: none;
-    margin: 4em;
-    padding: 0;
-    display: flex;
-    /* This makes the nav horizontal */
-    gap: 10px;
-    /* Space between buttons */
-    justify-content: flex-start;
-}
 
-#nav_list ul li a {
-    display: block;
-    /* Makes entire link area clickable */
-    padding: 1em 1.5em;
-    background-color: rgb(223, 223, 232);
-    color: darkblue;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid darkblue;
-    border-radius: 3px;
-    transition: background-color 0.3s, color 0.3s;
-    white-space: nowrap;
-    /* Prevents wrapping on long links */
-}
-
-#nav_list ul li a:hover {
-    background-color: darkblue;
-    color: white;
-}
 
 .fancy {
     font-family: 'Georgia', serif;
@@ -179,7 +172,8 @@ p::first-letter {
     color: #ff000d;
 }
 
-< !-- Media Quries for mobile users -->@media screen and (max-width: 768px) {
+< !-- Media Quries for mobile users -->
+@media screen and (max-width: 768px) {
     #nav_list ul {
         flex-wrap: wrap;
         justify-content: center;
@@ -213,6 +207,44 @@ p::first-letter {
         height: auto;
         padding: 1em;
     }
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#nav_list ul {
+    list-style-type: none;
+    margin: 4em;
+    padding: 0;
+    display: flex;
+    /* This makes the nav horizontal */
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: flex-start;
+}
+
+#nav_list ul li a {
+    display: block;
+    /* Makes entire link area clickable */
+    padding: 1em 1.5em;
+    background-color: rgb(223, 223, 232);
+    color: darkblue;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid darkblue;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+    /* Prevents wrapping on long links */
+}
+
+#nav_list ul li a:hover {
+    background-color: darkblue;
+    color: white;
 }
 
 footer p:last-of-type a::first-letter {

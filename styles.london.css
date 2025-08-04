@@ -1,18 +1,16 @@
 html,
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #dddfe6;
     color: rgb(14, 13, 13);
-    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     background-image: url('photos/unionjack.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
-    font-family: 'Arial', sans-serif;
+    background-repeat: no-repeat;
 }
+
 .overlay {
     background-color: rgba(240, 240, 240, 0.9);
     padding: 30px;
@@ -21,14 +19,18 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
+
 .container {
     display: flex;
     gap: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
+
 
 .column {
     flex: 1;
-    padding: 20px;
+    padding: 10px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -36,22 +38,31 @@ body {
     text-align: center;
 }
 
-header h1 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
+header h1,
 header h2 {
     text-align: center;
     margin-bottom: 40px;
+    color: silver;
 }
 
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: #f0f0f0;
+    /* optional for visual structure */
+    padding: 1em 0;
+    /* top/bottom spacing */
+    box-sizing: border-box;
 }
+
 
 #nav_list ul {
     list-style-type: none;
@@ -95,11 +106,6 @@ nav {
     color: darkblue;
 }
 
-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
 footer {
     text-align: center;
     margin-top: 40px;
