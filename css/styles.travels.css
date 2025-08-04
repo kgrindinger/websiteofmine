@@ -4,6 +4,11 @@ body {
     font-family: 'Arial', sans-serif;
     color: #020202;
 }
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 #nav_list ul {
     list-style-type: none;
@@ -62,7 +67,6 @@ section img {
 }
 
 .centered {
-    display: flex;
     justify-content: center;
     align-items: center;
     padding: 3rem;

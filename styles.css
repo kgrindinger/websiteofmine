@@ -22,7 +22,11 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
-
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 #nav_list ul {
     list-style-type: none;
     margin: 4em;

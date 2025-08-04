@@ -36,6 +36,11 @@ footer {
     margin-top: 40px;
     color: #ff000d;
 }
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
 #nav_list ul {
     list-style-type: none;
