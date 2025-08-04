@@ -4,6 +4,7 @@ body {
     background-color: #dddfe6;
     color: rgb(14, 13, 13);
     height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
     background-image: url('traveltags.jpg');
@@ -20,6 +21,38 @@ body {
     width: 80%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+}
+
+#nav_list ul {
+    list-style-type: none;
+    margin: 4em;
+    padding: 0;
+    display: flex;
+    /* This makes the nav horizontal */
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: flex-start;
+}
+
+#nav_list ul li a {
+    display: block;
+    /* Makes entire link area clickable */
+    padding: 1em 1.5em;
+    background-color: rgb(223, 223, 232);
+    color: darkblue;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid darkblue;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+    /* Prevents wrapping on long links */
+}
+
+#nav_list ul li a:hover {
+    background-color: darkblue;
+    color: white;
 }
 
 .fancy {
@@ -140,6 +173,42 @@ a:hover {
 p::first-letter {
     font-size: 2rem;
     color: #ff000d;
+}
+
+< !-- Media Quries for mobile users -->@media screen and (max-width: 768px) {
+    #nav_list ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #nav_list ul li {
+        flex: 1 1 45%;
+        margin-bottom: 1em;
+    }
+
+    #nav_list ul li a {
+        height: auto;
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #nav_list ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #nav_list ul li {
+        flex: none;
+        width: 90%;
+        margin-bottom: 1em;
+    }
+
+    #nav_list ul li a {
+        width: 100%;
+        height: auto;
+        padding: 1em;
+    }
 }
 
 footer p:last-of-type a::first-letter {
