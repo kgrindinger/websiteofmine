@@ -1,7 +1,6 @@
 html,
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #dddfe6;
     color: silver;
     height: 100%;
     width: 100%;
@@ -11,6 +10,49 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
+}
+
+/* Navigation Bar */
+#nav_list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#nav_list ul {
+    list-style-type: none;
+    margin: 4em;
+    padding: 0;
+    display: flex;
+    /* This makes the nav horizontal */
+    gap: 10px;
+    /* Space between buttons */
+    justify-content: flex-start;
+}
+
+#nav_list ul li {
+    width: auto;
+}
+
+#nav_list ul li a {
+    display: flex;
+    /* Makes entire link area clickable */
+    padding: 1em 1.5em;
+    background-color: rgb(223, 223, 232);
+    color: darkblue;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid darkblue;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+    /* Prevents wrapping on long links */
+}
+
+#nav_list ul li a:hover {
+    background-color: darkblue;
+    color: white;
 }
 
 a:focus,
@@ -38,20 +80,6 @@ a:hover {
     width: 80%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-}
-
-
-.fancy {
-    font-family: 'Georgia', serif;
-    font-size: 3.5rem;
-    color: #ff4e50;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.fancy:hover {
-    transform: scale(1.2) rotate(-3deg);
 }
 
 .container {
@@ -100,23 +128,21 @@ a:hover {
 
 
 h1 {
+    font-family: cursive;
     font-style: italic;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 6rem;
     text-align: center;
     padding: 10px 20px;
     border-radius: 8px;
-    background: linear-gradient(to right, #e88182, #b20e03);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: #ff000d;
     display: block;
     margin: 0 auto;
     width: fit-content;
 }
 
 h2 {
-    font-family: 'cursive';
+    font-family: 'arial';
     font-style: italic;
     font-weight: bold;
     font-size: 3rem;
@@ -125,9 +151,9 @@ h2 {
 }
 
 img {
-    display: block;
+    display: flex;
     margin: 0 auto;
-    width: 50%;
+    width: 1 1 100%;
 }
 
 
@@ -139,10 +165,6 @@ a[href^="https"] {
 .centered-link {
     color: #ff000d;
     text-decoration: none;
-}
-
-.centered-link:hover {
-    color: #ff6666;
 }
 
 hr {
@@ -161,78 +183,57 @@ p::first-letter {
     color: #ff000d;
 }
 
-< !-- Media Quries for mobile users -->@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+
+
     #nav_list ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+        padding: 0;
+        margin: 0;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     #nav_list ul li {
-        flex: 1 1 45%;
-        margin-bottom: 1em;
-    }
-
-    #nav_list ul li a {
-        height: auto;
-        padding: 1em;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #nav_list ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #nav_list ul li {
-        flex: none;
-        width: 90%;
-        margin-bottom: 1em;
+        width: 100%;
+        float: none;
     }
 
     #nav_list ul li a {
         width: 100%;
-        height: auto;
-        padding: 1em;
+        box-sizing: border-box;
     }
 }
 
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
+@media screen and (max-width: 768px) {
+    #nav_list {
+        background-color: #333;
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-#nav_list ul {
-    list-style-type: none;
-    margin: 4em;
-    padding: 0;
-    display: flex;
-    /* This makes the nav horizontal */
-    gap: 10px;
-    /* Space between buttons */
-    justify-content: flex-start;
-}
+    #nav_list a {
+        flex: none;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
 
-#nav_list ul li a {
-    display: block;
-    /* Makes entire link area clickable */
-    padding: 1em 1.5em;
-    background-color: rgb(223, 223, 232);
-    color: darkblue;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid darkblue;
-    border-radius: 3px;
-    transition: background-color 0.3s, color 0.3s;
-    white-space: nowrap;
-    /* Prevents wrapping on long links */
-}
+    .container {
+        flex-direction: column;
+    }
 
-#nav_list ul li a:hover {
-    background-color: darkblue;
-    color: white;
+    .left-column,
+    .center-column,
+    .right-column {
+        flex: 1 1 100%;
+        padding: 1.5%;
+        min-height: auto;
+    }
 }
 
 footer p:last-of-type a::first-letter {
