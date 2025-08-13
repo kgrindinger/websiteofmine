@@ -1,246 +1,408 @@
-html,
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    color: silver;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-image: url('photos/traveltags.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
-}
-
-/* Navigation Bar */
-#nav_list {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#nav_list ul {
-    list-style-type: none;
-    margin: 4em;
-    padding: 0;
-    display: flex;
-    /* This makes the nav horizontal */
-    gap: 10px;
-    /* Space between buttons */
-    justify-content: flex-start;
-}
-
-#nav_list ul li {
-    width: auto;
-}
-
-#nav_list ul li a {
-    display: flex;
-    /* Makes entire link area clickable */
-    padding: 1em 1.5em;
-    background-color: rgb(223, 223, 232);
-    color: darkblue;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid darkblue;
-    border-radius: 3px;
-    transition: background-color 0.3s, color 0.3s;
-    white-space: nowrap;
-    /* Prevents wrapping on long links */
-}
-
-#nav_list ul li a:hover {
-    background-color: darkblue;
-    color: white;
-}
-
-a:focus,
-button:focus {
-    outline: 2px solid #ff000d;
-    outline-offset: 2px;
-    background-color: #f0f0f0;
-}
-
-a:link,
-a:visited {
-    color: #ff000d;
-    text-decoration: none;
-}
-
-a:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-.overlay {
-    background-color: rgba(240, 240, 240, 0.9);
-    padding: 30px;
-    margin: 50px auto;
-    width: 80%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
 }
 
 .container {
-    width: 80%;
-    height: 80%;
-    margin: 50px auto;
-    padding: 30px;
-    box-shadow: none;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
+/* Header */
+header {
+  background-color: #2c3e50;
+  padding: 20px 0;
+  color: white;
 }
 
-.content {
-    font-size: 1.4rem;
-    line-height: 1.0;
-    margin: 2rem auto;
-    width: 100%;
-    height: 100%;
+h1 span {
+  font-family: 'Montserrat', sans-serif;
 }
 
-.card {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #e9ecef;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    /* this removes the bottom border */
-    box-sizing: border-box;
+table {
+    margin: auto; /* Centers the table */
+    border-collapse: collapse; /* Optional: for better styling */
+    width: 50%; /* Optional: set a width for the table */
 }
 
+th, td {
+    padding: 15px; /* Optional: adds padding to the cells */
+    text-align: center; /* Optional: centers text in cells */
+}
 
-h1 {
-    font-family: cursive;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 6rem;
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  float: left;
+}
+
+.trip-report-container {
+  display: flex;
+  justify-content: center;
+  /* centers the content as a group */
+  align-items: center;
+  gap: 1px;
+  /* space between link and image */
+  margin: 5px 0;
+  border: none;
+}
+
+.trip-report-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: darkblue;
+  text-decoration: none;
+}
+
+.trip-report-link:hover {
+  color: darkred;
+  text-decoration: underline;
+}
+
+.no-bullets {
+  list-style-type: none;
+  /* Removes the bullets */
+  padding: 0;
+  /* Removes default padding */
+  margin: 0;
+  /* Removes default margin */
+}
+
+.important-links table {
+  border: 6px solid darkred;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.important-links td {
+  padding: 10px;
+  text-align: center;
+  background:silver;
+  border: 1px solid;
+}
+
+.important-links a {
+  display: block;
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.important-links a:hover {
+  background: darkred;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+nav {
+  float: right;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: darkred;
+}
+
+/* Clear floats */
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://source.unsplash.com/1600x600/?travel,adventure') no-repeat center center/cover;
+  height: 400px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.btn-primary {
+  background-color: darkred;
+  color: #fff;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: darkred;
+}
+.feature-row {
+  display: flex;
+  gap: 20px;
+}
+
+.feature-box {
+  flex: 1;
+  max-width: 300px;
+  background: #fff;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.feature-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Posts Section */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin: 40px 0 60px;
+}
+
+.post {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.post-content p {
+  flex-grow: 1;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.passport-stamp {
+  width: 60px;
+  height: auto;
+}
+
+.hover-grow {
+  transition: transform 0.3s ease;
+  /* Smooth transition for the transform property */
+}
+
+.hover-grow:hover {
+  transform: scale(2.5);
+  /* Scales the image to 120% of its original size */
+}
+
+.btn-secondary {
+  align-self: flex-start;
+  background-color: darkblue;
+  color: #fff;
+  padding: 8px 22px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: darkred;
+}
+
+table {
+  border-collapse: collapse;
+  float: none;
+  text-align: center;
+  width: auto;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+.travel-tips {
+  text-align: left;
+  margin: 40px auto;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.travel-tips h2 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  color: darkred;
+}
+
+.travel-tips ul {
+  padding: 0;
+}
+
+.travel-tips li {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  position: relative;
+  padding-left: 30px; /* space for icon */
+}
+
+.travel-tips li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.do-dont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.column {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f9f9f9;
+}
+
+.column h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li + li {
+  margin-top: 6px;
+}
+
+/* Mobile friendly: stack columns */
+@media (max-width: 600px) {
+  .do-dont {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    float: none;
+    margin-top: 15px;
     text-align: center;
-    padding: 10px 20px;
-    border-radius: 8px;
-    color: #ff000d;
-    display: block;
-    margin: 0 auto;
-    width: fit-content;
-}
+  }
 
-h2 {
-    font-family: 'arial';
-    font-style: italic;
-    font-weight: bold;
-    font-size: 3rem;
+  .logo {
+    float: none;
     text-align: center;
-    color: #ff000d;
+  }
+
+  .hero {
+    height: 300px;
+  }
 }
 
-img {
-    display: flex;
-    margin: 0 auto;
-    width: 1 1 100%;
+/* Per-page hero images */
+.page-index .hero {
+  background-image: url('unionjack.jpg');
 }
 
-
-a[href^="https"] {
-    color: rgb(132, 129, 129);
-    text-decoration: none;
+.page-2008 .hero {
+  background-image: url('towerbridge2008.jpeg');
 }
 
-.centered-link {
-    color: #ff000d;
-    text-decoration: none;
+.page-2009 .hero {
+  background-image: url('billy-elliot_2009.jpg');
 }
 
-hr {
-    border: none;
-    border-top: 2px solid #ccc;
-    margin: 20px 0;
-    width: 80%;
-}
-
-a:hover {
-    color: #ff000d;
-}
-
-p::first-letter {
-    font-size: 2rem;
-    color: #ff000d;
-}
-
-@media screen and (max-width: 768px) {
-
-
-    #nav_list ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5em;
-        padding: 0;
-        margin: 0;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #nav_list ul li {
-        width: 100%;
-        float: none;
-    }
-
-    #nav_list ul li a {
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    #nav_list {
-        background-color: #333;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #nav_list a {
-        flex: none;
-        width: 100%;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    .container {
-        flex-direction: column;
-    }
-
-    .left-column,
-    .center-column,
-    .right-column {
-        flex: 1 1 100%;
-        padding: 1.5%;
-        min-height: auto;
-    }
-}
-
-footer p:last-of-type a::first-letter {
-    font-size: initial;
-    color: initial;
-}
-
-.page-footer {
-    color: #ff000d;
+.page-2010 .hero {
+  background-image: url('towerbridge2010.jpg');
 }
