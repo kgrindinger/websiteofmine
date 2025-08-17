@@ -17,26 +17,77 @@ body {
   margin: 0 auto;
 }
 
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* space between icon and text */
+}
+
+.title-with-icon img {
+  width: 30px;
+  height: auto;
+}
+
 /* Header */
 header {
   background-color: #2c3e50;
   padding: 20px 0;
   color: white;
+  margin-bottom: 0;
+}
+
+.header-left h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* space between text and icon */
+}
+
+.header-left h1 img.icon {
+  height: 40px;
+  /* adjust as needed */
+  width: auto;
+}
+
+.header-left {
+  float: left;
+  max-width: 60%;
+  /* prevents it from hogging the whole row */
+}
+
+.header-bottom {
+  background: #2c3e50;
+  /* match header background */
+  padding: 0;
+  margin: 0;
 }
 
 h1 span {
   font-family: 'Montserrat', sans-serif;
 }
 
-table {
-    margin: auto; /* Centers the table */
-    border-collapse: collapse; /* Optional: for better styling */
-    width: 50%; /* Optional: set a width for the table */
+h1 i,
+h1 img {
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
-th, td {
-    padding: 15px; /* Optional: adds padding to the cells */
-    text-align: center; /* Optional: centers text in cells */
+table {
+  margin: auto;
+  /* Centers the table */
+  border-collapse: collapse;
+  /* Optional: for better styling */
+  width: 50%;
+  /* Optional: set a width for the table */
+}
+
+th,
+td {
+  padding: 15px;
+  /* Optional: adds padding to the cells */
+  text-align: center;
+  /* Optional: centers text in cells */
 }
 
 .logo {
@@ -79,52 +130,124 @@ th, td {
   /* Removes default margin */
 }
 
-.important-links table {
-  border: 6px solid darkred;
-  margin: 20px auto;
-  text-align: center;
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
 }
 
-.important-links td {
-  padding: 10px;
+/* Hero Section */
+.hero {
+  background: no-repeat center center/cover;
+  height: 500px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  background:silver;
-  border: 1px solid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+
 }
 
-.important-links a {
-  display: block;
-  text-decoration: none;
+.hero-content {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.hero h2 {
+  font-family: 'Eagle Lake', italic;
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  text-align: center;
   color: darkblue;
-  font-weight: bold;
+
 }
 
-.important-links a:hover {
-  background: darkred;
+.hero h3 {
+  font-family: 'Eagle Lake', italic;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
   color: white;
-  transition: all 0.3s ease;
+
 }
 
-nav {
-  float: right;
+h2,
+h3 {
+  font-family: 'Eagle Lake', cursive;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: darkblue;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%)
 }
 
 .nav-links {
   list-style: none;
-  display: flex;
-  gap: 25px;
-  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-links a {
-  color: #fff;
+  background: white;
+  color: #2c3e50;
+  padding: 8px 15px;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 10px;
+  background: white;
+  /* tab background */
+}
+
+.nav-links li a {
+  display: inline-block;
+  padding: 10px, 20px;
+  background-color: white;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.nav-links li:last-child a {
+  border-right: none;
 }
 
 .nav-links a:hover {
-  color: darkred;
+  background: #2c3e50;
+  color: white;
+}
+
+.audio-container {
+  display: flex;
+  /* Use flexbox for centering */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically (if needed) */
+  margin: 0 auto;
+  /* Center the container itself */
 }
 
 /* Clear floats */
@@ -134,36 +257,10 @@ header::after {
   clear: both;
 }
 
-/* Hero Section */
-.hero {
-  background: url('https://source.unsplash.com/1600x600/?travel,adventure') no-repeat center center/cover;
-  height: 400px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  
-}
-
-.hero-content {
-  position: relative;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.hero h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+.eagle-lake-regular {
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .btn-primary {
@@ -179,6 +276,7 @@ header::after {
 .btn-primary:hover {
   background-color: darkred;
 }
+
 .feature-row {
   display: flex;
   gap: 20px;
@@ -211,7 +309,7 @@ header::after {
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
@@ -244,7 +342,7 @@ header::after {
 }
 
 .passport-stamp {
-  width: 60px;
+  width: 120px;
   height: auto;
 }
 
@@ -284,6 +382,7 @@ td {
   border: 1px solid #ccc;
   padding: 8px;
 }
+
 .travel-tips {
   text-align: left;
   margin: 40px auto;
@@ -305,7 +404,8 @@ td {
   font-size: 1.1rem;
   margin: 12px 0;
   position: relative;
-  padding-left: 30px; /* space for icon */
+  padding-left: 30px;
+  /* space for icon */
 }
 
 .travel-tips li::before {
@@ -313,6 +413,33 @@ td {
   left: 0;
   top: 0;
 }
+
+.important-links table {
+  border: 6px solid darkred;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.important-links td {
+  padding: 10px;
+  text-align: center;
+  background: silver;
+  border: 1px solid;
+}
+
+.important-links a {
+  display: block;
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.important-links a:hover {
+  background: darkred;
+  color: white;
+  transition: all 0.3s ease;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -322,6 +449,15 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+
+ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+li+li {
+  margin-top: 6px;
 }
 
 .column {
@@ -336,21 +472,8 @@ body {
   font-size: 1.2em;
 }
 
-ul {
-  margin: 0;
-  padding-left: 20px;
-}
 
-li + li {
-  margin-top: 6px;
-}
 
-/* Mobile friendly: stack columns */
-@media (max-width: 600px) {
-  .do-dont {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* Footer */
 footer {
@@ -387,6 +510,21 @@ footer {
 
   .hero {
     height: 300px;
+    padding: 0 10px;
+  }
+  .hero h2 {
+    font-size: 18px;
+  }
+  .audio-container iframe {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* Mobile friendly: stack columns */
+@media (max-width: 600px) {
+  .do-dont {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -400,9 +538,17 @@ footer {
 }
 
 .page-2009 .hero {
-  background-image: url('billy-elliot_2009.jpg');
+  background-image: url('big-ben_4328272641_o.jpeg');
 }
 
 .page-2010 .hero {
   background-image: url('towerbridge2010.jpg');
+}
+
+.page-about .hero {
+  background-image: url('unionjack.jpg');
+}
+
+.page-about .hero {
+  background-image: url('Mind-The-Gap-1030x773-3232463824.jpg');
 }
